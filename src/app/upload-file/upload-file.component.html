@@ -1,0 +1,10 @@
+<div class="content">
+    <input type="file"
+           id="file"
+           (change)="fileChanged($event)">
+    <p *ngIf="fileName">Contents of {{fileName}} :</p>
+    <p>{{displayContents}}</p>
+</div>
+
+
+<!-- (change)="handleFileInput($event.target.files)" -->
