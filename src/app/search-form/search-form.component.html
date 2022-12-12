@@ -1,5 +1,8 @@
 <div class="content">
     <p>search form!</p>
+    <!-- implement it so that you have a variable in form-results that checks value of search (animal, plant, mineral),
+    and loops through the entities to show the correct item -->
+    <li *ngFor="let item of entities.Animals">{{item.name}}</li>
 </div>
 <div class="content">
     <app-form-results></app-form-results>

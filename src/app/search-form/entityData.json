@@ -1,0 +1,44 @@
+{
+    "Animals":[
+       {
+          "name":"Cat",
+          "class":"Feline"
+       },
+       {
+          "name":"Dog",
+          "class":"Canine"
+       },
+       {
+          "name":"Rabbit",
+          "class":"Leporidae"
+       }
+    ],
+    "Plants":[
+       {
+          "name":"Fern",
+          "class":"Polypodiopsida"
+       },
+       {
+          "name":"Maple Tree",
+          "class":"Sapindaceae"
+       },
+       {
+          "name":"Tulip",
+          "class":"Liliaceae"
+       }
+    ],
+    "Minerals":[
+       {
+          "name":"Bauxite",
+          "class":"Sedimentary Rock"
+       },
+       {
+          "name":"Quartz",
+          "class":"Crystalline"
+       },
+       {
+          "name":"Granite",
+          "class":"Igneous Rock"
+       }
+    ]
+ }
