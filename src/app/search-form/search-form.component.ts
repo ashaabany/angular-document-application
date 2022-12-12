@@ -1,29 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import entityData from './entityData.json';
 
 export interface Entity {
-  "Animals": Array<Information>;
-  "Plants": Array<Information>;
-  "Minerals": Array<Information>;
+  "Animals": Array<EntityInformation>;
+  "Plants": Array<EntityInformation>;
+  "Minerals": Array<EntityInformation>;
 }
-export interface Information {
+export interface EntityInformation {
   name: string;
   class: string;
 }
-
-const entities: Entity = entityData
-
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
   styleUrls: ['./search-form.component.scss']
 })
 export class SearchFormComponent {
-  
-  entities: Entity = entityData
+  searchOptions = ["Animals", "Plants", "Minerals"]
+  searchText: string = this.searchOptions[0];
+
+  @Output() entities: Entity = entityData
+  @Output() selectedOption: string = this.searchText;
+
+
+  selected(filterValue: string) {
+   this.selectedOption = filterValue;
+  }
+
+  deleteFromData(event: any) {
+    let currentEntity: keyof Entity = event.deletedEntity;
+    this.entities[currentEntity].splice(event.index, 1)
+  }
 
   ngOnInit() {
-    console.log(this.entities["Animals"]);
+    //this.entities["Animals"].splice(0,1)
+    console.log(this.entities);
   }
 
 }

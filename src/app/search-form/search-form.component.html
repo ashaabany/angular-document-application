@@ -2,8 +2,20 @@
     <p>search form!</p>
     <!-- implement it so that you have a variable in form-results that checks value of search (animal, plant, mineral),
     and loops through the entities to show the correct item -->
-    <li *ngFor="let item of entities.Animals">{{item.name}}</li>
+    <!-- <li *ngFor="let item of entities.Animals">{{item.name}}</li> -->
+    <div>
+        <select [(ngModel)]="searchText" name="search">
+            <option *ngFor="let option of searchOptions">
+            {{option}}
+            </option>
+        </select>
+        <button (click)="selected(searchText)">Submit</button>
+    </div>
 </div>
 <div class="content">
-    <app-form-results></app-form-results>
+    <app-form-results 
+    [entities]="entities"
+    [selectedOption]="selectedOption"
+    (deleteItem)="deleteFromData($event)">
+    </app-form-results>
 </div>

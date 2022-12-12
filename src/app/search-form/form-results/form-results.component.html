@@ -1,1 +1,25 @@
-<p>form-results works!</p>
+<div class="content">  
+          
+    <table class="styled-table">  
+      <thead>  
+          <tr>  
+            <th>Name</th>  
+            <th>Class</th>  
+            <th>Edit</th>  
+          </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let entity of entities[selectedOption]; let i = index" class="active-row">  
+          <td>{{ entity.name }}</td>  
+          <td>{{ entity.class }}</td>  
+          <td>
+            <button class="btn btn-delete" (click)="deleteClicked(i)">
+                <span class="mdi mdi-delete mdi-24px"></span>
+                <span class="mdi mdi-delete-empty mdi-24px"></span>
+                <span>Delete</span>
+              </button>
+          </td>   
+        </tr>  
+      </tbody>  
+    </table>  
+  </div>  
