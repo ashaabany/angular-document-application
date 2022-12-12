@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   constructor(
-    private router: Router
+    public router: Router
   ) {}
 
   title = 'my-app';
-  
-  setTab(tabname: string) {
-    this.router.navigate([`/${tabname}`]);
+
+  public printURL() {
+    console.log(this.router.url)
   }
+  
 }

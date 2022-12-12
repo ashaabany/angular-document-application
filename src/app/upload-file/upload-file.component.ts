@@ -6,13 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./upload-file.component.scss']
 })
 export class UploadFileComponent {
-  constructor() { }
 
-  ngOnInit() {
-  }
-
-
-  displayContents: any = '';
+  fileContent: any = '';
   fileName: string = '';
   
 
@@ -23,14 +18,12 @@ export class UploadFileComponent {
         this.fileName = file.name;
         var reader = new FileReader();
         reader.onload = () => {
-            this.displayContents = reader.result;
+            this.fileContent = reader.result;
         };
         reader.readAsText(file);
 
       }
   }
-
-
 
 
 }
