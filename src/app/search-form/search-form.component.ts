@@ -32,9 +32,4 @@ export class SearchFormComponent {
     this.entities[currentEntity].splice(event.index, 1)
   }
 
-  ngOnInit() {
-    //this.entities["Animals"].splice(0,1)
-    console.log(this.entities);
-  }
-
 }

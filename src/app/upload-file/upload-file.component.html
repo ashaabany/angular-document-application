@@ -1,7 +1,12 @@
 <div class="content">
     <input type="file"
+           name="file"
            id="file"
+           class="inputfile"
+           accept=".txt"
            (change)="fileChanged($event)">
-    <p *ngIf="fileName">Contents of {{fileName}} :</p>
-    <p>{{fileContent}}</p>
+    <div class="terminal">
+        <pre *ngIf="!fileContent">The contents of your text file will appear here!</pre>
+        <pre *ngIf="fileContent">{{fileContent}}</pre>
+    </div>
 </div>

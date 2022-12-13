@@ -295,3 +295,16 @@
       visibility: hidden;
     }
   }
+
+  input {
+    margin-top: 1rem;
+    margin-left: 10%;
+}
+
+input::file-selector-button {
+    font-weight: bold;
+    color: dodgerblue;
+    padding: 0.5em;
+    border: thin solid grey;
+    border-radius: 3px;
+}

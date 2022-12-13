@@ -295,3 +295,29 @@
       visibility: hidden;
     }
   }
+
+  .submit-button {
+    background: #0066A2;
+    color: white;
+    border-style: outset;
+    border-color: #0066A2;
+    border-radius: 4px;
+    margin-left: 5px;;
+    height: 30px;
+    width: 100px;
+    font: bold15px arial,sans-serif;
+    text-shadow: none;
+    cursor: pointer;
+  }
+
+  .submit-button:active {
+    transform: scale(0.97);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+.custom-select {
+  width: 120px;
+  height: 25px;
+}

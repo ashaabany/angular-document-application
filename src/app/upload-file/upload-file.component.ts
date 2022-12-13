@@ -7,15 +7,12 @@ import { Component } from '@angular/core';
 })
 export class UploadFileComponent {
 
-  fileContent: any = '';
-  fileName: string = '';
-  
+  fileContent: any = '';  
 
   fileChanged(event: any) {
       const file = event.target.files[0];
 
       if (file) {
-        this.fileName = file.name;
         var reader = new FileReader();
         reader.onload = () => {
             this.fileContent = reader.result;
