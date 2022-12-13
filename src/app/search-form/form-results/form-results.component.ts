@@ -11,11 +11,10 @@ export class FormResultsComponent {
   @Input() selectedOption: string = '';
   @Output() deleteItem = new EventEmitter();
 
-
   deleteClicked(index: number) {
     let deletedEntity = this.selectedOption;
+    // emits an event to send the parent component the entity and index to be deleted
     this.deleteItem.emit({deletedEntity, index})
   }
-
 
 }

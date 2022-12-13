@@ -7,13 +7,6 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-
-$delete-red: red;
-
-body {
-  margin: 32px;
-}
-
 .btn {
   display: flex;
   align-items: center;
@@ -55,7 +48,6 @@ body {
   }
   
 
-  
   &:focus {
     box-shadow: 0 0 0 4px lighten(red, 40%);
   }

@@ -1,5 +1,4 @@
 <div class="content">  
-          
     <table class="styled-table">  
       <thead>  
           <tr>  
@@ -8,7 +7,8 @@
             <th>Edit</th>  
           </tr>  
       </thead>  
-      <tbody>  
+      <tbody>
+        <!-- looping through data and tracking index for deletion -->
         <tr *ngFor="let entity of entities[selectedOption]; let i = index" class="active-row">  
           <td>{{ entity.name }}</td>  
           <td>{{ entity.class }}</td>  

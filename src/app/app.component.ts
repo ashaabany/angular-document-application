@@ -11,10 +11,6 @@ export class AppComponent {
     public router: Router
   ) {}
 
-  title = 'my-app';
-
-  public printURL() {
-    console.log(this.router.url)
-  }
+  welcomeMessage = 'Hello :)';
   
 }

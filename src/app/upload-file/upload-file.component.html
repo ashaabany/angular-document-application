@@ -5,6 +5,7 @@
            class="inputfile"
            accept=".txt"
            (change)="fileChanged($event)">
+    <!-- displaying contents below -->
     <div class="terminal">
         <pre *ngIf="!fileContent">The contents of your text file will appear here!</pre>
         <pre *ngIf="fileContent">{{fileContent}}</pre>

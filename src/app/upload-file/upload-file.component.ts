@@ -18,9 +18,7 @@ export class UploadFileComponent {
             this.fileContent = reader.result;
         };
         reader.readAsText(file);
-
       }
   }
-
 
 }
